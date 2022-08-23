@@ -19,6 +19,10 @@ use \App\Http\Controllers\LoginController;
 Route::get('/', function () {
     return view('login');
 });
+
+Route::get('/layout', function () {
+    return view('utama');
+});
 Route::get('login', [LoginController::class, 'index'])->name('login');
 // Route::get('register', 'App\Http\Controllers\AuthController@register')->name('register');
 Route::post('proses_login', [LoginController::class, 'proses_login'])->name('proses_login');
